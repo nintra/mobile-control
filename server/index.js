@@ -1,13 +1,13 @@
 'use strict';
 
-const Hapi = require('hapi'),
+var Hapi = require('hapi'),
     Path = require('path'),
     Inert = require('inert');
 
 // Create a server with a host and port
-const server = new Hapi.Server();
+var server = new Hapi.Server();
 server.connection({
-    host: 'localhost',
+    host: '0.0.0.0',
     port: 44044
 });
 
