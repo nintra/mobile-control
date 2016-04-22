@@ -25,7 +25,7 @@ function generateId(length, chars) {
 $(function() {
 
     var _ = window._,
-        socket = window.io('http://192.168.2.193:44044'),
+        socket = window.io('http://logi.codes:44044'),
         userId = false,
         color  = '#000',
         connected = false,
