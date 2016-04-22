@@ -1,0 +1,64 @@
+<!doctype html>
+<html xmlns="//www.w3.org/1999/xhtml" lang="de" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>mobile control</title>
+
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link href='https://fonts.googleapis.com/css?family=Exo+2:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/styles/main.css?v=0.1">
+    <meta name="theme-color" content="#d23654" />
+</head>
+<body>
+
+    <div id="site">
+
+        <div class="setup">
+            <form action="">
+                <fieldset class="left">
+                    <label for="">ID</label>
+                    <input class="user-id" type="text" value="">
+                </fieldset>
+                <fieldset>
+                    <label for="role">Role</label>
+                    <output name="role"></output>
+                </fieldset>
+                <fieldset class="left">
+                    <button class="generate-id">ID generieren</button>
+                    <button type="submit">Verbinden</button>
+                </fieldset>
+                <fieldset>
+                    <label>Status</label>
+                    <output class="state">idle</output>
+                </fieldset>
+            </form>
+        </div>
+
+        <div class="test-outer">
+            <div class="test">
+                <button class="color">Change color</button>
+                <button class="clear">Clear</button>
+
+                <div class="images">
+                    <div class="clouds">
+                        <img src="/assets/images/clouds.png" alt="" width="1000" height="427">
+                    </div>
+                </div>
+
+                <canvas class="overlay-canvas" width="500" height="500"></canvas>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.11.1/lodash.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
+    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+    <script src="assets/scripts/parallax-layers.js"></script>
+    <script src="assets/scripts/main.js"></script>
+</body>
+</html>

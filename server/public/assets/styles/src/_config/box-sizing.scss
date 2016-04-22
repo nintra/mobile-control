@@ -1,0 +1,7 @@
+
+/* apply a natural box layout model to all elements */
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}

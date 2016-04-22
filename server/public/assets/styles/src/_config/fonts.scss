@@ -1,0 +1,55 @@
+
+
+
+
+/*@font-face {
+    font-family: 'orbitron-regular';
+    src: url('../fonts/orbitron/orbitron-regular-webfont.eot');
+    src: url('../fonts/orbitron/orbitron-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/orbitron/orbitron-regular-webfont.woff2') format('woff2'),
+         url('../fonts/orbitron/orbitron-regular-webfont.woff') format('woff'),
+         url('../fonts/orbitron/orbitron-regular-webfont.ttf') format('truetype'),
+         url('../fonts/orbitron/orbitron-regular-webfont.svg#orbitron-regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}*/
+
+// @font-face {
+//     font-family: 'exo2-light';
+//     src: url('../fonts/exo2/exo2-light-webfont.eot');
+//     src: url('../fonts/exo2/exo2-light-webfont.eot?#iefix') format('embedded-opentype'),
+//          url('../fonts/exo2/exo2-light-webfont.woff2') format('woff2'),
+//          url('../fonts/exo2/exo2-light-webfont.woff') format('woff'),
+//          url('../fonts/exo2/exo2-light-webfont.ttf') format('truetype'),
+//          url('../fonts/exo2/exo2-light-webfont.svg#exo2-light') format('svg');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+
+
+
+// base font-size, root-size
+$font_size_base: 1em;
+
+
+// name (family weight style)
+$fonts: (
+    ('subtle'   ("'Exo 2', sans-serif" 300 normal)),
+    ('default'  ("'Exo 2', sans-serif" 300 normal)),
+    ('accent'   ("'Exo 2', sans-serif" 300 normal)),
+    ('headline' ("'Exo 2', sans-serif" 300 normal))
+);
+
+
+// create font declarations with placeholder selectors
+@each $font in $fonts {
+    $name: nth($font, 1);
+    $data: nth($font, 2);
+
+    %font-#{$name} {
+        font-family: unquote(nth($data, 1));
+        font-weight: nth($data, 2);
+        font-style: nth($data, 3);
+    }
+}

@@ -1,0 +1,80 @@
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+$line-height: 1.2;
+
+html {
+    min-width: 20em;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    display: block;
+    @extend %font-default;
+    background: $color-background;
+    line-height: $line-height;
+    // -webkit-touch-callout: none !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    // letter-spacing: 1px;
+    @extend %font-headline;
+    @extend %no-select;
+    color: $color_accent;
+    cursor: default;
+}
+
+h1{
+    font-size: 1.6em;
+}
+
+h2{
+    font-size: 1.4em;
+}
+
+h3{
+    font-size: 1.2em;
+}
+
+
+p{
+    margin: 0 0 .5rem 0;
+}
+
+a{
+    text-decoration: none;
+    outline: none;
+    transition: color .2s;
+    color: $color_text;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+    &:active
+    &:focus{
+        text-decoration: none;
+        outline: none;
+        color: $color_text;
+    }
+
+    &:hover{
+        text-decoration: underline;
+        color: $color_accent;
+    }
+
+    img{
+        border: none;
+    }
+}
+
+
+

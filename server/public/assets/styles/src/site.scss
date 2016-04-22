@@ -1,0 +1,114 @@
+
+
+#site{
+    overflow:hidden;
+    width:100%;
+    height:100vh;
+}
+
+
+button{
+    color:$color-text;
+    background-color:$color-accent;
+    border:none;
+    outline:none;
+}
+
+
+.setup{
+    background: $color-background;
+    padding:1rem 1rem 0;
+
+    form{
+        @extend %group;
+
+        fieldset{
+            float:left;
+            margin:0 4rem 1rem 0;
+            @extend %group;
+            width:15rem;
+
+            &.left {
+                clear:both;
+            }
+        }
+
+        label{
+            display:block;
+            margin-right:.75rem;
+            width:5rem;
+            overflow:hidden;
+            float:left;
+        }
+
+        input,
+        output{
+            background-color:$color-background;
+            color:$color-text;
+            border:none;
+            border-bottom:1px solid #fff;
+            width:8rem;
+            line-height:1.2;
+            height:1.2rem;
+            float:left;
+        }
+    }
+}
+
+.test-outer{
+    position:relative;
+    display:block;
+    width:100%;
+    height:80%;
+    margin:0 auto;
+    overflow:hidden;
+    background:#eee;
+    background:#c5184d url(../images/magician.jpg) center / contain no-repeat;
+    @include aspect-ratio(1);
+
+    .test{
+        @extend %fit-container;
+
+        .clouds{
+            position:absolute;
+            left:-25%;
+            top:50%;
+            display:block;
+            width:150%;
+            height:auto;
+            transform:translate(0%, -60%);
+            opacity:.85;
+
+            img{
+                position: relative;
+                display:block;
+                width:100%;
+                height:auto;
+            }
+        }
+
+        button{
+            position:absolute;
+            left:1rem;
+            top:.5rem;
+            display:block;
+            z-index:10;
+            background-color:$color-background;
+            transition:background-color .4s;
+
+            &.clear{
+                left:auto;
+                right:1rem;
+            }
+        }
+
+        .overlay-canvas{
+            @extend %fit-container;
+            z-index:5;
+            opacity:.85;
+        }
+    }
+
+}
+
+

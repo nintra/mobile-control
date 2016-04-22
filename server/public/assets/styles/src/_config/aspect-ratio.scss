@@ -1,0 +1,27 @@
+
+
+@mixin aspect-ratio($ratio) {
+
+    &:before{
+        content:' ';
+        display:block;
+        padding-top:100%/$ratio;
+    }
+}
+
+
+$fonts: (
+    ('quad' 1),
+    ('wide-screen' (16/9)),
+    ('logo-logicodes' (90/17))
+);
+
+
+@each $font in $fonts {
+    $name: nth($font, 1);
+    $ratio: nth($font, 2);
+
+    %ratio-#{$name} {
+        @include aspect-ratio($ratio);
+    }
+}
